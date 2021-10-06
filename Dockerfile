@@ -22,7 +22,8 @@ RUN update-alternatives --install /usr/local/bin/pip pip /usr/local/bin/pip3 1
 
 RUN pip install --no-cache-dir psutil \
                 --no-cache-dir torch \
-                --no-cache-dir torchvision
+                --no-cache-dir torchvision \
+                --no-cache-dir captum
                 
 ADD serve serve
 RUN pip install ../serve/
